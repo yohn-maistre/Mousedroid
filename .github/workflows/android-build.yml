@@ -11,11 +11,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-java@v6.1.0
         with:
           distribution: temurin
           java-version: '17'
+      - name: Install Android command-line tools
+        uses: android-actions/setup-android@v4.0.4
       - name: Configure runner Android SDK
         run: |
           sdkmanager 'platforms;android-34' 'build-tools;35.0.0'
