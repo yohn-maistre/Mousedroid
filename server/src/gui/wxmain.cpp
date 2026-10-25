@@ -180,11 +180,11 @@ void wxMain::SetHostInfo(std::string _Hostname, std::string _IpAddress)
 
 void wxMain::HideWindow(wxIconizeEvent &evt)
 {
-    if(!settings.GetMinToTaskbar())
+    if(evt.IsIconized() && !settings.GetMinToTaskbar())
     {
         this->Hide();
-        evt.Skip();
     }
+    evt.Skip();
 }
 
 void wxMain::CheckboxCmdHandler(wxCommandEvent &evt)

@@ -81,6 +81,7 @@ class Input: Fragment() {
         binding.btnOpenDrawer.setOnClickListener {
             binding.drawerLayout.openDrawer(GravityCompat.START)
         }
+        binding.btnKeyboard.setOnClickListener { openSoftKeyboard() }
         binding.navigation.setNavigationItemSelectedListener { item ->
             when(item.itemId) {
                 R.id.mode_touchpad -> {

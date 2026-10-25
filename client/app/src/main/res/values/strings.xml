@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Mousedroid</string>
+    <string name="prototype_app_name">MouseDroid Prototype</string>
+    <string name="open_keyboard">Open keyboard</string>
     <string name="connectionFailedUSB">Make sure the server is open on the computer.</string>
     <string name="connectionFailedWIFI">Make sure the server is open on the computer and you are on the same network.</string>
     <string name="connectionLost">Server stopped responding!</string>

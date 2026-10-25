@@ -26,3 +26,10 @@ jobs:
       - name: Build app and regression-test APK; run JVM unit tests
         working-directory: client
         run: ./gradlew --no-daemon --max-workers=2 :app:assembleDebug :app:assembleDebugAndroidTest :app:testDebugUnitTest
+      - name: Export prototype APK
+        if: github.ref == 'refs/heads/feature/personal-sharing-prototype'
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: mousedroid-prototype-android
+          path: client/app/build/outputs/apk/debug/*.apk
+          retention-days: 14
